@@ -17,7 +17,7 @@ class Deck
           swapped = true
         end
       end
-      break if not swapped
+      break if !swapped
     end
     @cards
   end
