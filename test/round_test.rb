@@ -96,11 +96,11 @@ class RoundTest < MiniTest::Test
 
   def test_percent_correct
     card_1 = Card.new("3","Hearts")
-      card_2 = Card.new("4", "Clubs")
-      deck = Deck.new([card_1, card_2])
-      round = Round.new(deck)
-      round.record_guess({value: "3", suit: "Hearts"})
-      round.record_guess({value: "Jack", suit: "Diamonds"})
-      assert_equal 50, round.percent_correct
+    card_2 = Card.new("4", "Clubs")
+    deck = Deck.new([card_1, card_2])
+    round = Round.new(deck)
+    round.record_guess({value: "3", suit: "Hearts"})
+    round.record_guess({value: "Jack", suit: "Diamonds"})
+    assert_equal 50, round.percent_correct
   end
 end
